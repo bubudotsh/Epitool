@@ -108,7 +108,9 @@ case $option in
     esac
 done
 
-echo "${pwd}"
+
+ok=$(pwd)
+echo "${ok}"
 
 # #loop
 # while [ $a -eq 23 ]
