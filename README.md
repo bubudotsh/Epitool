@@ -27,7 +27,7 @@ this scipt add an alias in your bashrc and zshrc (if your have)
 ## Update
 
 ```bash
-  ./install.sh -u
+  epitool -u
 ```
 
 

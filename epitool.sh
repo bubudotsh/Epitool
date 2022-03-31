@@ -47,23 +47,6 @@ time=5
 i=1
 a=23
 
-#options managment
-while getopts "hu:t:" option; do
-case $option in
-    h)
-        help
-        exit;;
-    u)
-        update
-    t)
-        time=$OPTARG;;
-    \?)
-        echo "bad option, help : -h"
-        exit;;
-    esac
-done
-
-
 #functions
 norm () {
     bubulle
@@ -99,10 +82,29 @@ open () {
 }
 
 update () {
-    git clone 
+    git clone git@github.com:bubudotsh/Epitool.git
+    cp Epitool/epitool.sh ~/.epitool.sh
+    rm -fr Epitool
+    echo "${green}Done${reset}"
 }
 
 
+#options managment
+while getopts "h:ut:" option; do
+case $option in
+    h)
+        help
+        exit;;
+    u)
+        update
+        exit;;
+    t)
+        time=$OPTARG;;
+    \?)
+        echo "bad option, help : -h"
+        exit;;
+    esac
+done
 
 #loop
 while [ $a -eq 23 ]

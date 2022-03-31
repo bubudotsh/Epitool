@@ -26,22 +26,6 @@ install_bash () {
     fi
 }
 
-update () {
-    cp -fr .epitool.sh ~/.epitool.sh
-    echo "${green}Done${reset}"
-}
-
-#optin
-while getopts "u" option; do
-case $option in
-    u)
-        update
-        exit;;
-    \?)
-        echo "bad option"
-        exit;;
-    esac
-done
 
 #base
 echo "installation..."
