@@ -110,7 +110,6 @@ done
 while [ $a -eq 23 ]
 do
     check
-    head
     norm
     echo " "
     make > /dev/null
