@@ -51,7 +51,7 @@ if grep -q "alias epitool" ~/.bashrc
 then 
     echo "${red}Epitool est déjà installer${reset}"
 else
-    cp .epitool.sh ~/.epitool.sh
+    cp epitool.sh ~/.epitool.sh
     install_zsh
     install_bash
 fi
