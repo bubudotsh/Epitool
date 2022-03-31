@@ -115,6 +115,7 @@ do
     echo " "
     make > /dev/null
     makef
+    open
     sleep ${time}
     make fclean > /dev/null
     clear
