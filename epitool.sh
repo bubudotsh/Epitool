@@ -108,8 +108,7 @@ case $option in
     esac
 done
 
-res=${pwd}
-echo "${res}"
+echo "${pwd}"
 
 # #loop
 # while [ $a -eq 23 ]
