@@ -82,6 +82,8 @@ open () {
 }
 
 update () {
+    echo "update..."
+    echo " "
     git clone git@github.com:bubudotsh/Epitool.git 2> /dev/null 
     cp Epitool/epitool.sh ~/.epitool.sh
     rm -fr Epitool
@@ -106,17 +108,20 @@ case $option in
     esac
 done
 
-#loop
-while [ $a -eq 23 ]
-do
-    check
-    head
-    norm
-    echo " "
-    make > /dev/null
-    makef
-    open
-    sleep ${time}
-    make fclean > /dev/null
-    clear
-done
+res=${pwd}
+echo "${res}"
+
+# #loop
+# while [ $a -eq 23 ]
+# do
+#     check
+#     head
+#     norm
+#     echo " "
+#     make > /dev/null
+#     makef
+#     open
+#     sleep ${time}
+#     make fclean > /dev/null
+#     clear
+# done
