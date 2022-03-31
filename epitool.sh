@@ -82,7 +82,7 @@ open () {
 }
 
 update () {
-    git clone git@github.com:bubudotsh/Epitool.git
+    git clone git@github.com:bubudotsh/Epitool.git 2> /dev/null 
     cp Epitool/epitool.sh ~/.epitool.sh
     rm -fr Epitool
     echo "${green}Done${reset}"
@@ -110,6 +110,7 @@ done
 while [ $a -eq 23 ]
 do
     check
+    head
     norm
     echo " "
     make > /dev/null
