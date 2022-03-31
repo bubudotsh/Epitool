@@ -46,6 +46,7 @@ reset=`tput sgr0`
 time=5
 i=1
 a=23
+path=$(pwd)
 
 #functions
 norm () {
@@ -76,7 +77,7 @@ makef () {
 open () {
     echo "***OUT***"
     echo " "
-    ./a.out
+    bash ${path}/a.out
     echo " "
     echo "***OUT***"
 }
@@ -108,21 +109,17 @@ case $option in
     esac
 done
 
-
-ok=$(pwd)
-echo "${ok}"
-
-# #loop
-# while [ $a -eq 23 ]
-# do
-#     check
-#     head
-#     norm
-#     echo " "
-#     make > /dev/null
-#     makef
-#     open
-#     sleep ${time}
-#     make fclean > /dev/null
-#     clear
-# done
+#loop
+while [ $a -eq 23 ]
+do
+    check
+    head
+    norm
+    echo " "
+    make > /dev/null
+    makef
+    open
+    sleep ${time}
+    make fclean > /dev/null
+    clear
+done
