@@ -77,7 +77,7 @@ makef () {
 open () {
     echo "***OUT***"
     echo " "
-    bash ${path}/a.out
+    ./${path}/a.out
     echo " "
     echo "***OUT***"
 }
